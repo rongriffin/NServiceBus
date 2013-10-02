@@ -21,7 +21,8 @@
 
             
             var queue = new MessageQueue(queueAddress);
-            var messageReadPropertyFilter = new MessagePropertyFilter {Id = true, Extension = true, ArrivedTime = true};
+            var messageReadPropertyFilter = new MessagePropertyFilter();
+            messageReadPropertyFilter.SetAll();
 
             queue.MessageReadPropertyFilter = messageReadPropertyFilter;
 
